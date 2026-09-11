@@ -4386,13 +4386,9 @@ The lease auto-renews while the guest remains connected, so long-running session
 
 ## Related
 
-{% content-ref url="../view-parameters/scene.md" %}
 [scene.md](../view-parameters/scene.md)
-{% endcontent-ref %}
 
-{% content-ref url="scenetype.md" %}
 [scenetype.md](scenetype.md)
-{% endcontent-ref %}
 ---
 description: Shows only the last added video to a scene
 ---
