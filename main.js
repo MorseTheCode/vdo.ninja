@@ -9543,8 +9543,12 @@ async function main() {
 					UUIDS[i].streamID = session.rpcs[i].streamID || false;
 					if (session.rpcs[i].stats && session.rpcs[i].stats.info) {
 						UUIDS[i].info = session.rpcs[i].stats.info;
+						UUIDS[i].resolution = session.rpcs[i].stats.resolution || false;
+						UUIDS[i].bitrate = session.rpcs[i].stats.videoBitrate_kbps || false;
 					} else {
 						UUIDS[i].info = {};
+						UUIDS[i].resolution = false;
+						UUIDS[i].bitrate = false;
 					}
 				}
 				parent.postMessage(
