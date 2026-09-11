@@ -17952,7 +17952,13 @@ function updateLocalStats() {
 									}
 								}
 								var miniInfo = {};
-								var sendMini = false;
+								if (session.pcs[UUID].stats.resolution) {
+									miniInfo.res = session.pcs[UUID].stats.resolution;
+								}
+								if (session.pcs[UUID].stats.video_bitrate_kbps) {
+									miniInfo.bitrate = session.pcs[UUID].stats.video_bitrate_kbps;
+								}
+								var sendMini = true;
 								if ("encoderImplementation" in stat) {
 									session.pcs[UUID].stats.video_encoder = stat.encoderImplementation;
 									if (stat.encoderImplementation == "ExternalEncoder") {
